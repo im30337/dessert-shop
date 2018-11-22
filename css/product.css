@@ -1,0 +1,73 @@
+.navbar {
+  margin-bottom: 30px; }
+
+.main-section {
+  padding: 0 41px 0 41px;
+  height: fit-content; }
+  .main-section .background {
+    position: relative;
+    padding-top: 40px;
+    background-image: url(https://bit.ly/2Qodh3Z);
+    background-size: cover;
+    background-position: center;
+    height: 496px;
+    margin-bottom: 60px; }
+    .main-section .background > img {
+      position: absolute;
+      top: 40px;
+      right: 39.9px;
+      height: 327.79px;
+      width: 89.1px; }
+  .main-section .product-section .sidebar {
+    width: 100%; }
+    .main-section .product-section .sidebar .class-list {
+      width: 100%; }
+      .main-section .product-section .sidebar .class-list li {
+        height: 65px;
+        width: 100%;
+        border: 1px solid #EAF0ED;
+        font-size: 24px;
+        font-weight: bold;
+        color: #3F5D45;
+        text-align: center;
+        line-height: 65px;
+        transition: all 0.5s ease-in-out; }
+      .main-section .product-section .sidebar .class-list .option {
+        cursor: pointer; }
+      .main-section .product-section .sidebar .class-list .option:hover {
+        background-color: #FFE180;
+        color: #EAF0ED; }
+      .main-section .product-section .sidebar .class-list .option:focus {
+        background-color: gray; }
+      .main-section .product-section .sidebar .class-list .header {
+        background-color: #3F5D45;
+        color: #EAF0ED; }
+  .main-section .product-section .cartbox1 {
+    margin-bottom: 20px; }
+  .main-section .page-button {
+    display: flex;
+    justify-content: flex-end; }
+    .main-section .page-button div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      float: left;
+      height: 60px;
+      width: 60px;
+      border: 1px solid #EAF0ED;
+      cursor: pointer; }
+    .main-section .page-button div:hover {
+      background-color: #3F5D45; }
+
+@media (max-width: 767px) {
+  .main-section .background img {
+    height: 218.52px;
+    width: 59.41px; }
+  .main-section .page-button {
+    justify-content: center; } }
+
+@media (max-width: 375px) {
+  .main-section {
+    padding: 0; }
+    .main-section > .product-section .sidebar {
+      float: none; } }

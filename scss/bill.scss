@@ -1,0 +1,202 @@
+@import './variables';
+
+.main-section {
+    padding: 0 42px 0 42px;
+    display: flex;
+
+    .cart-section {
+        width: 65.95%;
+        margin: 0 20px 0 0;
+
+        .cart-title {
+            height: 65px;
+            background-color: #EAF0ED;
+            margin-bottom: 13px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            span {
+                font-size: 24px;
+                font-weight: bold;
+                color: #3F5D45;
+            }
+        }
+
+        .cart-list {
+            margin-top: 20px;
+        }
+
+        .cart {
+            height: 130px;
+            margin-top: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #EAF0ED;
+
+            .item-detail {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+
+                span {
+                    color: $primary;
+                }
+
+                img {
+                    height: 110px;
+                    width: 110px;
+                }
+
+                .del-btn {
+                    cursor: pointer;
+                }
+
+                .del-btn:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+
+    .bill-section {
+        width: 31.91%;
+
+        .bill-detail {
+            height: 193px;
+            background-color: #3F5D45;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            //justify-content: center;
+
+            &>span {
+                height: fit-content;
+                //width: 100%;
+                font-size: 24px;
+                font-weight: bold;
+                color: #EAF0ED;
+                margin-bottom: 16px;
+                margin-top: 16px;
+            }
+
+            .sum {
+                width: 90%;
+                border-top: 1px solid white;
+                padding-top: 8px;
+
+                .cart-sum {
+                    margin-top: 16px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    span {
+                        color: #EAF0ED;
+                        font-weight: lighter;
+                    }
+                }
+
+                .freight {
+                    @extend.cart-sum ;
+                }
+
+                .bill-sum {
+                    @extend.cart-sum ;
+                    margin: 16px 0;
+
+                    span {
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        .checkout-btn {
+            height: 65px;
+            background-color: #FFE180;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.5s ease-in-out;
+
+            span {
+                font-size: 24px;
+                font-weight: bold;
+                color: #3F5D45;
+            }
+        }
+
+        .checkout-btn:hover {
+            background-color: #EAF0ED;
+        }
+    }
+}
+
+//=============================Media section======================
+@media (max-width:767px) {
+    .main-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+
+        .cart-section {
+            width: 100%;
+            margin: 0px;
+
+            .cart-list {
+                padding: 0 8% 0 8%;
+            }
+
+        }
+
+        .bill-section {
+            width: 100%;
+
+
+
+            .bill-detail {
+                background-color: white;
+
+                span {
+                    color: #3F5D45;
+                }
+
+                .sum {
+
+                    .cart-sum {
+
+                        span {
+                            color: #3F5D45;
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+    }
+}
+
+@media (max-width:480px) {
+    .main-section {
+        .cart-section {
+            .cart {
+                height: fit-content;
+
+                .item-detail {
+                    flex-direction: column;
+
+                    span {
+                        margin: 8px 0;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+}

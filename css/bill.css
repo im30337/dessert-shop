@@ -1,0 +1,109 @@
+.main-section {
+  padding: 0 42px 0 42px;
+  display: flex; }
+  .main-section .cart-section {
+    width: 65.95%;
+    margin: 0 20px 0 0; }
+    .main-section .cart-section .cart-title {
+      height: 65px;
+      background-color: #EAF0ED;
+      margin-bottom: 13px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .main-section .cart-section .cart-title span {
+        font-size: 24px;
+        font-weight: bold;
+        color: #3F5D45; }
+    .main-section .cart-section .cart-list {
+      margin-top: 20px; }
+    .main-section .cart-section .cart {
+      height: 130px;
+      margin-top: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #EAF0ED; }
+      .main-section .cart-section .cart .item-detail {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center; }
+        .main-section .cart-section .cart .item-detail span {
+          color: #3F5D45; }
+        .main-section .cart-section .cart .item-detail img {
+          height: 110px;
+          width: 110px; }
+        .main-section .cart-section .cart .item-detail .del-btn {
+          cursor: pointer; }
+        .main-section .cart-section .cart .item-detail .del-btn:hover {
+          transform: scale(1.2); }
+  .main-section .bill-section {
+    width: 31.91%; }
+    .main-section .bill-section .bill-detail {
+      height: 193px;
+      background-color: #3F5D45;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .main-section .bill-section .bill-detail > span {
+        height: fit-content;
+        font-size: 24px;
+        font-weight: bold;
+        color: #EAF0ED;
+        margin-bottom: 16px;
+        margin-top: 16px; }
+      .main-section .bill-section .bill-detail .sum {
+        width: 90%;
+        border-top: 1px solid white;
+        padding-top: 8px; }
+        .main-section .bill-section .bill-detail .sum .cart-sum, .main-section .bill-section .bill-detail .sum .freight, .main-section .bill-section .bill-detail .sum .bill-sum {
+          margin-top: 16px;
+          display: flex;
+          justify-content: space-between; }
+          .main-section .bill-section .bill-detail .sum .cart-sum span, .main-section .bill-section .bill-detail .sum .freight span, .main-section .bill-section .bill-detail .sum .bill-sum span {
+            color: #EAF0ED;
+            font-weight: lighter; }
+        .main-section .bill-section .bill-detail .sum .bill-sum {
+          margin: 16px 0; }
+          .main-section .bill-section .bill-detail .sum .bill-sum span {
+            font-size: 20px;
+            font-weight: bold; }
+    .main-section .bill-section .checkout-btn {
+      height: 65px;
+      background-color: #FFE180;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.5s ease-in-out; }
+      .main-section .bill-section .checkout-btn span {
+        font-size: 24px;
+        font-weight: bold;
+        color: #3F5D45; }
+    .main-section .bill-section .checkout-btn:hover {
+      background-color: #EAF0ED; }
+
+@media (max-width: 767px) {
+  .main-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 0; }
+    .main-section .cart-section {
+      width: 100%;
+      margin: 0px; }
+      .main-section .cart-section .cart-list {
+        padding: 0 8% 0 8%; }
+    .main-section .bill-section {
+      width: 100%; }
+      .main-section .bill-section .bill-detail {
+        background-color: white; }
+        .main-section .bill-section .bill-detail span {
+          color: #3F5D45; }
+        .main-section .bill-section .bill-detail .sum .cart-sum span, .main-section .bill-section .bill-detail .sum .freight span, .main-section .bill-section .bill-detail .sum .bill-sum span {
+          color: #3F5D45; } }
+
+@media (max-width: 480px) {
+  .main-section .cart-section .cart {
+    height: fit-content; }
+    .main-section .cart-section .cart .item-detail {
+      flex-direction: column; }
+      .main-section .cart-section .cart .item-detail span {
+        margin: 8px 0; } }

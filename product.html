@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>product</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/product.css">
+
+
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="navbar">
+            <i class="fas fa-bars mobile-bar"></i>
+            <div class="logo">
+                <img src="./img/logo-dark.svg" class="logo-icon" alt="shop-icon">
+                <a href="./index.html">
+                    <img src="./img/logotype-lg-dark.svg" class="logo-word" alt="">
+                </a>
+            </div>
+            <div class="navbar-list">
+                <a class="mobile-hide" href="./index.html">首頁</a>
+                <a class="mobile-hide" href="./product.html">甜點</a>
+                <a class="mobile-hide" href="">登入</a>
+                <a href="./bill.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="badge badge-light" id="count-span" style="display:none;">0</span>
+                </a>
+            </div>
+
+        </div>
+        <div class="main-section">
+            <div class="background">
+                <img src="./img/lg-想吃甜點是不需要理由的.svg" alt="">
+            </div>
+            <div class="product-section">
+                <div class="row">
+                    <div class="col-md-4 ">
+                        <div class="sidebar">
+                            <ul class="class-list">
+                                <li class="header">甜點類別</li>
+
+                                <li class="option">所有甜點(48)</li>
+
+                                <li class="option">本日精選(10)</li>
+
+                                <li class="option">人氣推薦(26)</li>
+
+                                <li class="option">新品上市(12)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row product-list-group" id="product-list-group">
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div class="page-button clearfix">
+                <div><i class="fas fa-caret-left page-direction"></i></div>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div><i class="fas fa-caret-right page-direction"></i></div>
+            </div>
+        </div>
+
+        <div class="info-section ">
+            <div class="upper-section">
+                <div class="b-1">
+                    <!-- <img src="./img/logo-dark.svg" alt=""> -->
+                    <span>訂閱你我的甜蜜郵件</span>
+                </div>
+                <div class=" mail-address">
+                    <div class="mailbox">
+                        <!-- <img src="./img/baseline-email-24px.svg" alt=""> -->
+                        <i class="fas fa-envelope mail-icon"></i>
+                    </div>
+                    <div class="arrow"><img src="./img/baseline-arrow_forward-24px.svg" alt=""></div>
+                </div>
+            </div>
+            <div class="lower-section">
+                <!-- <div class="contact"> -->
+                <div class="logo-cover">
+                    <img class="logo" src="./img/logotype-lg-dark.svg" alt="">
+                </div>
+                <img class="slogan" src="./img/sm-今天是個吃甜點的好日子.svg" alt="">
+                <div class="contact">
+                    <span>
+                        07-12345678<br>
+                        sweetaste@gmail.com<br>
+                        800 高雄市新興區幸福路520號
+                    </span>
+                </div>
+                <img class="line-icon" src="./img/ic-line@.svg" alt="">
+                <img class="facebook-icon" src="./img/ic-facebook.svg" alt="">
+                <div class="copyright-notice">
+                    <span>© 2018 Sweetaste* All Rights Reserved</span>
+                </div>
+                <!-- </div> -->
+                <!-- <div class="slogan"></div> -->
+            </div>
+        </div>
+    </div>
+    <!-- script section -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase-firestore.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAhnJsmCk1xl5CKqc3rdoQX5Si1epMzia8",
+            authDomain: "js-304-terry.firebaseapp.com",
+            databaseURL: "https://js-304-terry.firebaseio.com",
+            projectId: "js-304-terry",
+            storageBucket: "js-304-terry.appspot.com",
+            messagingSenderId: "948600395086"
+        };
+        firebase.initializeApp(config);
+        const db = firebase.firestore();
+        db.settings({
+            timestampsInSnapshots: true
+        });
+    </script>
+    <script src="./js/product.js"></script>
+</body>
+
+
+
+</html>
